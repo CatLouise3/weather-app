@@ -6,7 +6,7 @@ body {
 }
 
 .app {
-  background-image: url("src/cloud-background.jpg");
+  background-image: url("cloud-background.jpeg");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
