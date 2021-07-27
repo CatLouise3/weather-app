@@ -1,0 +1,171 @@
+ody {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  border-radius: 50px;
+  margin: 40px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.app {
+  background-image: url("src/cloud-background.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 30px;
+  border-radius: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.cityName {
+  display: center;
+  margin-left: 210px;
+  margin-top: 60px;
+}
+.searchButton {
+  background: #8ec5fc;
+  color: #fff;
+  border-radius: 6px;
+  text-align: right;
+  margin: 0;
+}
+
+.searchButton:hover {
+  background: #e0c3fc;
+  cursor: pointer;
+}
+
+.locationButton {
+  background: #8ec5fc;
+  border-radius: 6px;
+  text-align: right;
+  margin: 0;
+}
+
+.locationButton:hover {
+  background: #e0c3fc;
+  cursor: pointer;
+}
+.city {
+  color: white;
+  display: left;
+  margin: 50px;
+  margin-left: 200px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+}
+.temperature {
+  color: white;
+  display: left;
+  margin: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+  display: margin-left;
+  text-align: left;
+
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.temp {
+  font-size: 70px;
+  color: #e0c3fc;
+}
+
+.units {
+  position: relative;
+  font-size: 25px;
+  color: #6593fa;
+  top: -80px;
+  left: 80px;
+}
+.degreesChange {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  position: relative;
+  top: -120px;
+  left: 130px;
+}
+a {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+}
+.degrees:hover {
+  color: #245bce;
+  cursor: pointer;
+}
+
+.cityInfo {
+  color: #8ec5fc;
+}
+
+.cityTemp {
+  color: #e0c3fc;
+}
+
+.week {
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  margin-left: 800px;
+  margin-top: -255px;
+  text-align: center;
+}
+
+.cloud-sun {
+  font-size: 80px;
+  color: #fde3f8;
+  position: relative;
+  top: -40px;
+}
+.currentWeather {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  left: 460px;
+  top: -80px;
+}
+.currentWeather {
+  position: relative;
+  bottom: 50px;
+  font-size: 30px;
+}
+
+.rowImages {
+  color: #fde3f8;
+  font-size: 50px;
+}
+
+.tempWeek {
+  font-size: 20px;
+  color: #fff;
+}
+
+.tips {
+  color: #fff;
+  border-color: #e0c3fc;
+  background: #8ec5fc;
+  opacity: 0.6;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  bottom: 655px;
+  left: -20px;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 690px;
+  width: 45%;
+}
