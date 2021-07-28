@@ -172,4 +172,19 @@ a {
 
 .source {
     text-align: center;
+    position: relative;
+    top: 50px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1px;
+
+}
+
+.git {
+    color: #e0c3fc;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+
+
 }
