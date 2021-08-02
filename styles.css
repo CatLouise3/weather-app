@@ -1,4 +1,4 @@
-body {
+body  {
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   border-radius: 50px;
   margin: 40px;
@@ -15,7 +15,7 @@ body {
   border-radius: 30px;
 }
 
-h2 {
+h2  {
   font-weight: bold;
   font-size: 40px;
 }
@@ -117,7 +117,7 @@ a {
   color: #e0c3fc;
 }
 
-.week {
+.week{
   font-weight: bold;
   font-size: 25px;
   color: #fff;

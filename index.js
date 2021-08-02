@@ -25,6 +25,9 @@ function formatDate() {
 let nowElement = document.querySelector("#current-day");
 nowElement.innerHTML = formatDate();
 
+
+
+
 // Search Engine and Button
 
 function displayWeatherCondition(response) {
@@ -48,6 +51,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+searchCity("Montreal");
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -89,7 +93,11 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector(".locationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Montreal");
+let iconElement= document.querySelector ("#icon");
+iconElement.setAttribute = ("src", 
+`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+);
+iconElement.setAttribute = ("alt", response.data.weather[0].description);
 
 //Convert
 function convertCelsius(event) {
