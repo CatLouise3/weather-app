@@ -44,7 +44,17 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+
+    let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+
 
 function searchCity(city) {
   let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
@@ -93,11 +103,6 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector(".locationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let iconElement= document.querySelector ("#icon");
-iconElement.setAttribute = ("src", 
-`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-);
-iconElement.setAttribute = ("alt", response.data.weather[0].description);
 
 //Convert
 function convertCelsius(event) {
