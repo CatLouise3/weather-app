@@ -1,3 +1,4 @@
+
 //Get Current Date and Time
 function formatDate() {
   let now = new Date();
@@ -24,8 +25,6 @@ function formatDate() {
 }
 let nowElement = document.querySelector("#current-day");
 nowElement.innerHTML = formatDate();
-
-
 
 
 // Search Engine and Button
@@ -55,45 +54,21 @@ function displayWeatherCondition(response) {
 }
 
 
-
-
-
-
 function searchCity(city) {
   let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-searchCity("Montreal");
 
-// Unit Conversion
-function displayFahrenheitTemp (event); {
-    event.preventDefault ();
-    let temperatureElement =document.querySelector (#temperature);
-    let fahrenheitTemp =  (celsiusTemperature *9) / 5  + 32;
-    temperatureElement.innerHTML = Math.round (fahrenheitTemp);
-}
 
-function displayCelsiusTemperature (event); {
-    event.preventDefault ();
-    let temperatureElement =document.querySelector (#temperature);
-    temperatureElement.innerHTML = celsiusTemperature;
-
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector ("#fahrenheit-link");
-fahrenheitLink.addEventListener ("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector ("#celsius-link");
-celsiusLink.addEventListener ("click", displayCelsiusTemperature);  
 
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
+
+
 
 function searchLocation(position) {
   let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
@@ -111,11 +86,38 @@ function getCurrentLocation(event) {
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+
 
 let currentLocationButton = document.querySelector(".locationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 
 
+// Convert 
+function displayFahrenheitTemperature(event){
+    event.preventDefault();
+    let fahrenheitTemperature = (celsiusTemperature * 9)/ 5 + 32
+    let temperatureElement = document.querySelector ("#temperature");
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector ("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature =  null;
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+searchCity("Montreal");
