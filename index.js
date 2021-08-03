@@ -56,12 +56,38 @@ function displayWeatherCondition(response) {
 
 
 
+
+
+
 function searchCity(city) {
   let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 searchCity("Montreal");
+
+// Unit Conversion
+function displayFahrenheitTemp (event); {
+    event.preventDefault ();
+    let temperatureElement =document.querySelector (#temperature);
+    let fahrenheitTemp =  (celsiusTemperature *9) / 5  + 32;
+    temperatureElement.innerHTML = Math.round (fahrenheitTemp);
+}
+
+function displayCelsiusTemperature (event); {
+    event.preventDefault ();
+    let temperatureElement =document.querySelector (#temperature);
+    temperatureElement.innerHTML = celsiusTemperature;
+
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector ("#fahrenheit-link");
+fahrenheitLink.addEventListener ("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector ("#celsius-link");
+celsiusLink.addEventListener ("click", displayCelsiusTemperature);  
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -81,19 +107,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = 66;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = 19;
-}
-
-let dateElement = document.querySelector("#current-day");
+ dateElement = document.querySelector("#current-day");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
@@ -104,20 +118,4 @@ let currentLocationButton = document.querySelector(".locationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 
-//Convert
-function convertCelsius(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#current-temp");
-  let convertCelsius = "17°";
-  currentTemp.innerHTML = "17°";
-}
-let showCelsius = document.querySelector("#celsius-link");
-showCelsius.addEventListener("click", convertCelsius);
-function convertFahrenheit(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#current-temp");
-  let convertFahrenheit = "63°";
-  currentTemp.innerHTML = "63°";
-}
-let showFahrenheit = document.querySelector("#fahrenheit-link");
-showFahrenheit.addEventListener("click", convertFahrenheit);
+
