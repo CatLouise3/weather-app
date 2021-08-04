@@ -25,22 +25,19 @@ function formatDate() {
 }
 let nowElement = document.querySelector("#current-day");
 nowElement.innerHTML = formatDate();
-
-
-//Forecast  
+ 
 //Forecast 
 
 function displayForecast(response) {
 let forecast= response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-
   let forecastHTML = `<div class= "row">`;
   days.forEach(function (forecastDay) {
     forecastHTML = forecastHTML +
       `
       <div class="col-2">
-        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <div class="weather-forecast-date">${forecastDay.dt}</div>
         <img
           src="http://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
@@ -62,14 +59,15 @@ let forecast= response.data.daily;
 }
 
 
-// Search Engine and Button
-function getForecast(coordinates){
-    console.log (coordinates);
-    let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
-    let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-    console.log (apiUrl);
-    axios.get (apiUrl).then(displayForecast);
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
+
+// Search Engine and Button
 
 function displayWeatherCondition(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
