@@ -28,7 +28,8 @@ nowElement.innerHTML = formatDate();
 
 //Forecast 
 
-function displayForecast() {
+function displayForecast(response) {
+    console.log (response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -59,6 +60,13 @@ function displayForecast() {
 
 
 // Search Engine and Button
+function getForecast(coordinates){
+    console.log (coordinates);
+    let apiKey = "d395633e12b8e5d20de90a77b90b43eb";
+    let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    console.log (apiUrl);
+    axios.get (apiUrl).then(displayForecast);
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
@@ -83,6 +91,8 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast (response.data.coord);
 }
 
 
@@ -151,4 +161,3 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 searchCity("Montreal");
-displayForecast ();
