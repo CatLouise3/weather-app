@@ -188,3 +188,7 @@ a {
   font-size: 20px;
 }
 
+.linkedIn:hover {
+  color: #e0c3fc;
+  cursor: pointer;
+}
