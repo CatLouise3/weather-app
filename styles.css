@@ -178,3 +178,8 @@ a {
   bottom: 90px;
   left: 68px;
 }
+
+.weather-forecast-temperature-min {
+  color: #e0c3fc;
+  
+}
