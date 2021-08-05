@@ -41,7 +41,8 @@ let forecast= response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class= "row">`;
-  forecast.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay, index) {
+      if (index < 6) {
     forecastHTML = 
         forecastHTML +
         `
@@ -60,6 +61,7 @@ let forecast= response.data.daily;
         </div>
         </div>
   `;
+        }
   });
 
   forecastHTML = forecastHTML + `</div>`;

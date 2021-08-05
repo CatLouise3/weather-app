@@ -21,7 +21,7 @@ h2  {
 }
 
 .cityName {
-  display: center;
+  display:center;
   margin-left: 210px;
   margin-top: 60px;
   left: 50px;
@@ -63,7 +63,6 @@ h2  {
 }
 .temperature {
   color: white;
-  display: left;
   margin: 50px;
   font-weight: bold;
   font-size: 20px;
@@ -78,6 +77,8 @@ h2  {
 .temp {
   font-size: 70px;
   color: #e0c3fc;
+  position:relative;
+  left: 80px;
 }
 
 .units {
@@ -94,8 +95,8 @@ h2  {
   font-size: 25px;
   text-decoration: none;
   position: relative;
-  top: -120px;
-  left: 130px;
+  top: -100px;
+  left: 230px;
 }
 a {
   background: transparent;
@@ -117,27 +118,22 @@ a {
   color: #e0c3fc;
 }
 
-.week{
+#forecast{
   font-weight: bold;
   font-size: 25px;
   color: #fff;
-  margin-left: 800px;
-  margin-top: -255px;
+  margin-left: 40px;
+  margin-top: -150px;
   text-align: center;
 }
 
-.cloud-sun {
-  font-size: 80px;
-  color: #fde3f8;
-  position: relative;
-  top: -40px;
-}
+
 .currentWeather {
-  color: #fff;
+  color:#245bce;
   font-size: 40px;
   font-weight: bold;
-  left: 450px;
-  top: -150px;
+  left: 640px;
+  top: -210px;
 }
 .currentWeather {
   position: relative;
@@ -167,7 +163,7 @@ a {
 }
 
 .git {
-    color: #e0c3fc;
+    color:#245bce;
     font-size: 20px;
     position: relative;
     top: 2px;
@@ -177,6 +173,6 @@ a {
 
 #icon {
   position: relative;
-  bottom: 100px;
-  left: -15px;
+  bottom: 90px;
+  left: 68px;
 }
